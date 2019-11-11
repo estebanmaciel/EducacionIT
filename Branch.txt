@@ -7,7 +7,7 @@ Partimos una Rama Principal y a partir de ese punto podemos crear bifurcaciones 
 
 Entre los comandos que podemos utilizar
 
-
+asldñfjkasdlifjpasidjfñalskdjfñalsdkfhaopifñasldkfmnñalsdkfjañsldfkjñasldkfhañsldfjñsdlfañsoifasñldfkasñdifj
 Git Branch [Nombre] => Crea una Rama
 Git 
 Checkout [Nombre] => Apunta el HEAD a la Rama solicitada siempre y cuando Exista
