@@ -1,0 +1,11 @@
+STAGING AREA
+
+Este es el lugar donde se almacenara temporalmente el registro de cambios.
+Para ello debemos agregar los elementos que queremos sean monitoreados por GIT
+
+Entre los comandos que podemos utilizar en INDEX (Staging Area)
+
+Git Add => Agrega los archivos, carpetas al INDEX para realizar el seguimiento de los mismos, antes de ser Commiteados
+Git Remove => Quita del INDEX, las carpetas o Archivos seleccionados
+Git Checkout => Reestablece un archivo a un estado de Commit Anterior
+
