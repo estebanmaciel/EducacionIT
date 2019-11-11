@@ -1,0 +1,18 @@
+REPOSITORIO
+
+Aqui es donde van a parar todos los Commits en forma de SNAPSHOTS (Capturas del Codigo escrito) y almacenados como BLOBS (Archivos de Objeto BINARIO)
+Esto marca un Hito en el tiempo al cual podremos volver, siempre y cuando indiquemos en numero de HASH correspondiente.
+Los repositorios pueden ser LOCALES o REMOTOS (GitHub)
+
+
+Entre los comandos que podemos utilizar encontraremos
+Git Clone [url] => Realiza una copia LOCAL de un REPOSITORIO REMOTO
+Git Pull [url] => Toma los cambios de un REPOSITORIO REMOTO y los Agrega al Repositorio LOCAL ACTUAL
+Git Fetch [url] => Descarga los Cambios de un REPOSITORIO REMOTO y lo INICIALIZA
+
+Git Commit => Crea la Captura Correspondiente del Codigo en Base a los archivos que se encuentren en el INDEX
+Git Revert [Hash] => Reestablece los archivos del WORKING DIRECTORY a un COMMIT ANTERIOR creando un COMMIT NUEVO
+Git RESET ==> Ubica la Cabecera en el commit solicitado para ver el Estado de los archivos durante ese commit, si indicamos el parametro --SOFT.
+		Por el contrario , si indicamos el parametro --HARD, elimina los commits posteriores al Solicitado
+
+Git Push [url] => Envia los cambios actuales a un REPOSITORIO REMOTO
