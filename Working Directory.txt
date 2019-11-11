@@ -1,13 +1,28 @@
 WORKING DIRECTORY
 
+
 Directorio de Trabajo en el que nos encontramos.
+
 Aqui crearemos archivos, los manipularemos o incluso los removeremos.
+
+
 
 Entre los comandos que podemos utilizar se encuentran.
 
+
+
 ls => Lista los archivos y carpetas del Directorio Actual
+
 cd [directorio] => Permite desplazarnos entre directorios
+
 touch [nombre de archivo.extension] => permite crear un archivo
+
 rm [nombre directorio/archivo] => Elimina el elemento en cuestion
+
 nano [archivo] => Abre el editor de codigo para modificar el archivo
 
+
+mv [nombre anterior] [nombre nuevo] => Renombra un archivo o carpeta
+clear => Limpia la linea de comandos, para un mejor flujo de trabajo
+
+git init => inicializa un nuevo Repositorio Local
