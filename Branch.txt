@@ -1,8 +1,8 @@
-BRANCH (RAMAS)
+BRANCHasjdñflajsñdflajsñdflkasdf (RAMAS)
 
 Una ramificacion es una extension de nuestro proyecto.
 
-Partimos una Rama Principal y a partir de ese punto podemos crear bifurcaciones para no afectar a la principal
+Partimos una Rama Princiasdfiajsdfilajsdñlfsfpal y a partir de ese punto podemos crear bifurcaciones para no afectar a la principal
 
 
 Entre los comandos que podemos utilizar
@@ -12,10 +12,10 @@ Git Branch [Nombre] => Crea una Rama
 Git 
 Checkout [Nombre] => Apunta el HEAD a la Rama solicitada siempre y cuando Exista
 
-Git Switch [Nombre] => Iguasdfasdfhalsdukfhal que CHECKOUT, Cambia a la Rama actual
+Git Switch [Nombre] => Iguasdfasdfhalsdukfhal que CHECKOUT, Cambia a la Ramasdiofjñaslidjfñalsdfa actual
 
 
-Git Checkout -b [Nombre] => Creaasdlifañsdijfñalksdf y cambia el HEAD a la nueva RAMA
+Git Checkout -b [Nomasdlfasñdilfjañsldkfjñaslidfjñalskdfbre] => Creaasdlifañsdijfñalksdf y cambia el HEAD a la nueva RAMA
 
 Git Merge [Nombre] => FusDiferentes
 
