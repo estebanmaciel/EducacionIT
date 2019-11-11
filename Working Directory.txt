@@ -25,4 +25,4 @@ nano [archivo] => Abre el editor de codigo para modificar el archivo
 mv [nombre anterior] [nombre nuevo] => Renombra un archivo o carpeta
 clear => Limpia la linea de comandos, para un mejor flujo de trabajo
 
-git init => inicializa un nuevo Repositorio Local
+git init => inicializa un nuevo Repositorio Local (crea la carpeta .git)
