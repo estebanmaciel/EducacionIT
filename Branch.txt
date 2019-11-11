@@ -21,9 +21,4 @@ Git Merge [Nombre] => Fusiona en la RAMA ACTUAL la RAMA SOLICITADA en un Nuevo C
 
 Git Rebase [Commit/Rama] => Repite los Commits a partir de un punto indicado y los reordena en caso de pertenecer a Ramas Diferentes
 
-
-
-
-
-
-asdfdfgss
+añsdfjñalskjdfñalsdjfñalsdjfñalsdfjñl
