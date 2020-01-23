@@ -35,7 +35,7 @@
 
 		.menu{
 			padding:0;
-			background-color: darkblue;
+			background-color: blue;
 		}
 
 		.menu li{
@@ -59,6 +59,37 @@
 		div img{
 			width:300px;
 
+		}
+
+		form,input,textarea,select{
+			width:300px;
+			border:0;
+			margin:10px auto; /*Top Right Bottom Left*/
+			padding:0;
+			resize: none;
+			text-align:left;
+		}
+
+		input,select{
+			height: 30px;
+		}
+
+		textarea{
+			height: 90px;
+		}
+
+		.enviar{
+			text-align:center;
+			font-weight: bold;
+			color:darkgreen;
+			background-color: limegreen;
+			border-radius: 5px;
+			margin:-10px auto;
+		}
+
+		.enviar:hover{
+			color:white;
+			background-color: darkgreen;
 		}
 	</style>
 </head>
@@ -104,7 +135,7 @@
 				<li>PNG (Portable Network Graphics)</li>
 				<li>GIF (Graphics Interchange Format)</li>
 			</ul>
-			<div style="overflow:hidden">
+			<div style="overflow: hidden;">
 				<img style="float:left" src="img/ih-greenhulk-03.jpg" alt="Hulk Verde - Tintas">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -113,20 +144,40 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
-			<div>
-				<p><img src="img/dices.png" alt="Imagen PNG dados">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			<div style="overflow: hidden; border:1px solid black;">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				consequat. <img src="img/dices.png" alt="Imagen PNG dados" style="float:right;">Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
 			<div>
-				<img src="img/love-666.gif" alt="Gif Animado love-666">
+				<p>
+					<img src="img/love-666.gif" alt="Gif Animado love-666">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
 			</div>
 		</article>
 	</main>
 	<footer>
+		<form action="contacto.php" method="POST">
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" placeholder="Ingrese su Nombre"/>
+
+			<label for="email">Correo:</label>
+			<input type="email" name="email" placeholder="Ingrese su Correo" required/>
+
+			<label for="consulta">Consulta:</label>
+			<textarea name="consulta" placeholder="Ingrese su Consulta"></textarea>
+			<input class="enviar" type="submit" value="Consultar" />
+
+		</form>
 		<p>&copy; Todos los derechos reservados | Cristian Racedo &amp; compañia</p>
 	</footer>
 </body>
