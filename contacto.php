@@ -3,6 +3,7 @@
 $nombre=$_POST['nombre'];
 $email=$_POST['email'];
 $tel=$_POST['tel'];
+$sexo=$_POST['sexo']
 $consulta=$_POST['consulta'];
 
 // cuerpo del mail

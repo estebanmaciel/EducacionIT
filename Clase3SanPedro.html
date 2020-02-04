@@ -1,48 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Clase3</title>
+	<meta charset="utf-8">
+	<title>Aprendiendo con Cristián</title>
+	<style type="text/css">
+	img{width: 100px; height: 100px}
+	
+	body,#header,#footer, menu {margin: 0;border: 0;padding: 0;background-color: rgba(180,180,180,0.3);}
+	header, footer{text-align: center;}
+	a{color:white;
+		background-color: none;}
+	.menu li {display: inline-block;padding: 0 10px; width: 80px;height: 30px;line-height: 30px}
+	.menu li:hover,.active {background-color: #192168}
+
+	form, input,select,textarea{width: 450px;padding: 0;margin: auto;border: o;}
+
+	</style>
 </head>
+<body>
+	<header id="header">
+		<img src="img/cr-logo.png" alt="Logo">
+		<h1>HTML5</h1>
+		<p>y mucho mas...</p>
+		<nav>
+			<ul class="menu">
+				<li class="active"><a href="">inicio</a></li>
+				<li><a href="galeria.html">galeria</a></li>
+				<li><a href="productos.html">productos</a></li>
+				<li><a href="servicios.html">servicios</a></li>
+				<li><a href="#contacto">contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<section>
+				<header>
+					<h1>Titulo</h1>
+				</header>
+				<p>
+					<img src="img/ih-greenhulk-03.jpg" alt="Hulk Verde">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, voluptatum velit repudiandae alias temporibus accusantium asperiores explicabo non id, incidunt exercitationem aperiam, similique! Illum aperiam expedita accusamus vero harum, laboriosam.
+				Odit illum commodi dolorum ut quas necessitatibus similique sunt soluta ipsam? Esse necessitatibus, sed. Ipsa ducimus optio porro. Consectetur ab fugiat asperiores pariatur, aperiam dolor tempore quas magnam accusantium eius.
+				Laborum voluptates quaerat dolorem inventore numquam aliquam amet voluptatibus hic. Dolor doloribus, tempore animi cupiditate tenetur ex dignissimos facere facilis, ratione ipsum velit accusantium, architecto, impedit rerum? Iure, numquam, ipsam!
+				Qui nisi officia a doloribus quae, temporibus suscipit inventore repellendus minima cum omnis earum ab tempora magnam ipsa, sint. Quis commodi beatae eaque voluptatibus est expedita, vel totam ducimus pariatur.
+				Odio magni, alias, ipsam rem, facere et esse cupiditate, mollitia numquam nostrum autem! Cumque rerum sint quas reiciendis nobis quo ipsa ea consequuntur tempore amet, recusandae pariatur, explicabo necessitatibus. Adipisci.
+				Veniam dolorum quo illo quisquam nostrum ex illum earum vero, reiciendis omnis, quos recusandae ipsam consectetur corporis officiis impedit placeat cupiditate dignissimos ab asperiores a! Hic neque nam ipsa aperiam.</p>
+				<footer>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
+				</footer>
+			</section>
+			<section>
+				<header>
+					<h1>Titulo</h1>
+				</header>
+				<p>
+					<img src="img/ih-greenhulk-04.jpg" alt="Hulk Verde">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, voluptatum velit repudiandae alias temporibus accusantium asperiores explicabo non id, incidunt exercitationem aperiam, similique! Illum aperiam expedita accusamus vero harum, laboriosam.
+				Odit illum commodi dolorum ut quas necessitatibus similique sunt soluta ipsam? Esse necessitatibus, sed. Ipsa ducimus optio porro. Consectetur ab fugiat asperiores pariatur, aperiam dolor tempore quas magnam accusantium eius.
+				Laborum voluptates quaerat dolorem inventore numquam aliquam amet voluptatibus hic. Dolor doloribus, tempore animi cupiditate tenetur ex dignissimos facere facilis, ratione ipsum velit accusantium, architecto, impedit rerum? Iure, numquam, ipsam!
+				Qui nisi officia a doloribus quae, temporibus suscipit inventore repellendus minima cum omnis earum ab tempora magnam ipsa, sint. Quis commodi beatae eaque voluptatibus est expedita, vel totam ducimus pariatur.
+				Odio magni, alias, ipsam rem, facere et esse cupiditate, mollitia numquam nostrum autem! Cumque rerum sint quas reiciendis nobis quo ipsa ea consequuntur tempore amet, recusandae pariatur, explicabo necessitatibus. Adipisci.
+				Veniam dolorum quo illo quisquam nostrum ex illum earum vero, reiciendis omnis, quos recusandae ipsam consectetur corporis officiis impedit placeat cupiditate dignissimos ab asperiores a! Hic neque nam ipsa aperiam.</p>
+				<footer>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
+				</footer>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<p>&copy; Todos los derechos Reservados | Cristian Racedo &amp; Compañia</p>
+	</footer>
+	<div>
+		<form action="" method="post">
+			<label>Emial</label><br>
+				<input type="email" name="" placeholder="email@red.com" required="" pattern="@gmail.com"><br>		
+			<label>Contraseña</label><br>
+				<input type="" name="" value=""><br>
+			<label>Sexo del usuario</label><br>
+				<input type="radio" name="Hombre" value="Hombre">
+				<input type="radio" name="mujer" value="Mujer"><br>
 
-
-
-
-		<body>
-			<
-
-			<main>
-				<article>
-						<section>
-							<header>
-								<h1>Titulo principal con imagen</h1>
-							</header>
-						</section>
-				</article>
+			<label>Up your count</label><br>
+				<button>Logiarse</button>
+		</form>
+		<form action="" method="post">
+			<label for="nombre">Nombre</label>
+				<input type="text" name="nombre">
+			<label for="email">Correo</label>
+				<input type="email" name="email">
+			<label for="consulta">Consultas</label>
+				<textarea name="consulta"></textarea>	
+				<input type="submit" name="" value="Enviar Form">
 				
 
-
-
-
-
-
-
-
-
-			</main>
-				<footer>
-					
-				</footer>
-
-
-	
-			
+		</form>
+	</div>
 	
 
-
-	
-		</body>
-
-
-
+</body>
 </html>
