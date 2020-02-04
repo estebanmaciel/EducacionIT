@@ -1,0 +1,70 @@
+body,#header,#footer,.menu{
+			margin:0;
+			border:0;
+			padding:0;
+			background-color: rgba(120,120,180,0.5);
+		}
+		header,footer{
+			padding:20px 0;
+			text-align: center;
+		}
+		#header,section{
+			overflow: hidden;
+		}
+		#header h1, #header p{
+			margin:-0.25px;
+		}
+		#header img{
+			float: left;
+			width:80px;
+			margin:10px;
+		}
+		a{
+			color:white;
+			text-decoration: none;
+		}
+		.menu li{
+			display: inline-block;
+			padding: 0 10px; /*Top Right Bottom Left*/
+			width:80px;
+			height:30px;
+			line-height: 30px;
+		}
+		.menu li:hover,.active{
+			background-color: #192168;/*MIN 0-F MAX*/
+		}
+		section img{
+			width:150px;
+			margin:0 15px;
+			float: left;	
+		}
+		form{
+			text-align: left;
+		}
+		form,input,select,textarea{
+			width:450px;
+			margin:0 auto;
+			border:0;
+			padding:0;
+			/* CENTRAR CONTENIDO
+				linea - lineabloque{text-align:center};
+				bloque{margin:auto};*/
+		}
+		input,select,textarea{
+			height: 25px;
+			outline: none;
+			box-shadow:0 0 10px #192168; /*x y blur color*/
+			border-radius: 5px;
+		}
+		textarea{
+			height:75px;
+			resize: none;
+		}
+		.enviar{
+			color:white;
+			background-color: darkgreen;
+		}
+		.enviar:hover{
+			color:white;
+			background-color: limegreen;
+		}
