@@ -1,0 +1,18 @@
+##### R2 #####
+ip access-list extended SERVER20.254
+ 10 deny ip 192.168.11.0 0.0.0.255 192.168.20.0 0.0.0.255
+ 20 permit tcp 192.168.10.0 0.0.0.255 192.168.20.254 0.0.0.0 eq www
+ 30 deny ip 192.168.10.0 0.0.0.255 192.168.20.254 0.0.0.0 
+ 40 permit ip any any 
+
+interface GigabitEthernet0/0
+ ip access-group SERVER20.254 out
+
+##### R3 #####
+
+ip access-list extended 10.10
+ 10 deny ip 192.168.10.0 0.0.0.255 any
+ 20 permit ip any any
+
+interface GigabitEthernet0/0
+ ip access-group 10.10 out

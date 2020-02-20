@@ -1,0 +1,17 @@
+vlan 10
+na COMPRAS
+vlan 20
+na VENTAS
+vlan 30
+na ADMINISTRACION
+
+int ra fa0/1-8
+sw acc vlan 10
+int ra fa0/9-16
+sw acc vlan 20
+int ra fa0/17-24
+sw acc vlan 30
+
+int ra gi0/1-2
+sw mo tr
+sw tr all vlan 1,10,20,30

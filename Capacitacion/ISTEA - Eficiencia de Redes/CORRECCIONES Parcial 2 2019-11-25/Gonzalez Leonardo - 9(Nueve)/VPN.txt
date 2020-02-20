@@ -1,0 +1,222 @@
+########### VPN 1 ############
+
+
+Router#sh run
+Building configuration...
+
+Current configuration : 1248 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+crypto isakmp policy 2
+ encr aes
+ hash md5
+ authentication pre-share
+ group 2
+!
+crypto isakmp key ISTEA address 10.0.0.6
+!
+!
+!
+crypto ipsec transform-set vpnistea esp-aes esp-md5-hmac
+!
+crypto map MAPA isakmp authorization list vpn
+crypto map MAPA 10 ipsec-isakmp 
+ set peer 10.0.0.6
+ set transform-set vpnistea 
+ match address vpn
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.10.65 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ ip address 10.0.0.1 255.255.255.252
+ clock rate 2000000
+ crypto map MAPA
+!
+interface Serial0/0/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 192.168.10.0 255.255.255.192 10.0.0.2 
+ip route 192.168.20.0 255.255.255.192 10.0.0.2 
+!
+ip flow-export version 9
+!
+!
+ip access-list extended vpn
+ permit ip 192.168.10.64 0.0.0.63 192.168.10.0 0.0.0.63
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
+
+Router#      
+
+########### VPN 2 ############
+
+
+Router#sh run
+Building configuration...
+
+Current configuration : 1228 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+crypto isakmp policy 2
+ encr aes
+ hash md5
+ authentication pre-share
+ group 2
+!
+crypto isakmp key ISTEA address 10.0.0.1
+!
+!
+!
+crypto ipsec transform-set vpnistea esp-aes esp-md5-hmac
+!
+crypto map MAPA isakmp authorization list vpn
+crypto map MAPA 10 ipsec-isakmp 
+ set peer 10.0.0.1
+ set transform-set vpnistea 
+ match address vpn
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.10.1 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Serial0/0/1
+ ip address 10.0.0.6 255.255.255.252
+ crypto map MAPA
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 192.168.10.64 255.255.255.192 10.0.0.5 
+ip route 192.168.20.0 255.255.255.192 10.0.0.5 
+!
+ip flow-export version 9
+!
+!
+ip access-list extended vpn
+ permit ip 192.168.10.0 0.0.0.63 192.168.10.64 0.0.0.63
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
+
+Router#    

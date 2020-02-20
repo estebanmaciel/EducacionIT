@@ -1,0 +1,21 @@
+crypto isakmp policy 10 
+encryption aes
+hash md5
+lifetime 86400
+group 2
+authentication pre-share
+
+crypto isakmp key ISTEA address 10.0.0.1
+crypto ipsec transform-set TS-VPN esp-aes esp-md5-hmac
+
+ip access-list extended VPN-ACL
+permit ip 192.168.10.0 0.0.0.63 192.168.10.64 0.0.0.63
+
+crypto map cm1 isakmp authorization list VPN-ACL
+crypto map CM1 10 ipsec-isakmp
+set peer 10.0.0.1
+match address VPN-ACL
+set transform-set TS-VPN
+
+interface ser0/0/1
+crypto map CM1
